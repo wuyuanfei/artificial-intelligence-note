@@ -50,6 +50,7 @@
 #### 7. 工作项目
 
 - **Text detection**
+
   - **CPTN**：https://github.com/eragonruan/text-detection-ctpn
   - http://slade-ruan.me/
   - **CNN+RNN+CTC**方案
@@ -71,8 +72,24 @@
   - 
 
 - **Face recognition**
+
+  - opencv Haar
+
+    > 有点是简单，快速；存在的问题是人脸检测效果不好。如图3-1所示，正面/垂直/光线较好的人脸，该方法可以检测出来，而侧面/歪斜/光线不好的人脸，无法检测。因此，该方法不适合现场应用
+
+  - dlib
+
+    > 效果好于opencv的方法，但是检测力度也难以达到现场应用标准
+
   - mtcnn + facenet
 
+    > mtcnn人脸检测方法对自然环境中光线，角度和人脸表情变化更具有鲁棒性，人脸检测效果更好；同时，内存消耗不大，可以实现实时人脸检测
+
+  - 训练集：VGGFace2数据集
+
+    > 331万个图像=9131实例*362.6图像
+    >
+    > 姿势，年龄，种族，职业（演员，运动员，政治家）
 - **object detection**
   - ssd
   - yolov3
